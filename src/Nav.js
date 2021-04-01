@@ -6,7 +6,7 @@ function Nav() {
     <div>
       <ul>
         <li>
-          <Link to="/Home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li><Link to="/Signup">Sign Up</Link></li>
         <li><Link to="/Location">Locations</Link></li>
