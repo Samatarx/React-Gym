@@ -21,13 +21,16 @@ function Footer() {
   return (
     <AppBar position="static">
       <List className={classes.list}>
+      <ListItem button>
+          <Link to="/Covid-19">Covid-19</Link>
+        </ListItem>
         <ListItem button>
           <Link to="/AboutUs">About Us</Link>
         </ListItem>
-        <ListItem>
+        <ListItem button>
           <Link to="/Careers">Careers</Link>
         </ListItem>
-        <ListItem>
+        <ListItem button>
           <Link to="/Terms">Terms & conditions</Link>
         </ListItem>
       </List>

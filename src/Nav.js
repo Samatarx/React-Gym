@@ -20,8 +20,17 @@ const useStyles = makeStyles({
   list : {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    
+  },
+  App : {
+    width:'100%'
+  },
+  listItem: {
+    listStyle:'none',
+    textDecoration:'none'
   }
+
 });
 
 function Nav() {
@@ -31,11 +40,11 @@ function Nav() {
       <Toolbar className={classes.nav}>
         <Typography><Link to="/">React Gym</Link></Typography>
         <List className={classes.list}>
-          <ListItem button>
+          <ListItem className={classes.listItem} button>
             <Link to="/Signup">Sign Up</Link>
           </ListItem>
-          <ListItem>
-            <Link to="/Location">Locations</Link>
+          <ListItem button>
+            <Link to="/Location"  >Locations</Link>
           </ListItem>
         </List>
       </Toolbar>
