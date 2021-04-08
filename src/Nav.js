@@ -8,18 +8,30 @@ import {
   ListItem,
   List,
 } from "@material-ui/core";
-import {FitnessCenter} from '@material-ui/icons';
+// import {FitnessCenter} from '@material-ui/icons';
 
 
-const useStyles = makeStyles({});
+const useStyles = makeStyles({
+  nav: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  list : {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  }
+});
 
 function Nav() {
+  const classes = useStyles()
   return (
-    <AppBar>
-      <Toolbar className='nav'>
+    <AppBar className={classes.App} position="static" >
+      <Toolbar className={classes.nav}>
         <Typography><Link to="/">React Gym</Link></Typography>
-        <List>
-          <ListItem>
+        <List className={classes.list}>
+          <ListItem button>
             <Link to="/Signup">Sign Up</Link>
           </ListItem>
           <ListItem>

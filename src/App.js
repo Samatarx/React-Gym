@@ -9,11 +9,19 @@ import AboutUs from './AboutUs'
 import Terms from './Terms'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import { Grid } from "@material-ui/core";
+
 
 function App() {
   return (
+    <Grid
+  container
+  direction="column"
+  justify="center"
+  alignItems="center"
+>
     <Router>
-      <Nav />
+      <Nav/>
       
       <Switch>
         
@@ -38,6 +46,7 @@ function App() {
       </Switch>
      <Footer/>
     </Router>
+    </Grid>
   );
 }
 
