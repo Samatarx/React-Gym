@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    height:'100vh'
+    height:'90vh'
   },
   overlay: {
     position: 'absolute',
@@ -23,9 +23,8 @@ const useStyles = makeStyles({
     alignItems:'center',
     justifyContent:'center',
     height:'100%',
-    // zIndex:'10'
-
-  },
+    color:'white',
+  }
 });
 
 const urlLink = 'https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
@@ -36,7 +35,10 @@ function Home() {
     <Container className={classes.main} style={{backgroundImage:`url(${urlLink})`}} >
       <div className={classes.overlay}/>
         <Grid container className={classes.text}>
-          <h1>Hi</h1>
+          <Grid>
+          <h1>TRAIN WITH CONFIDENCE</h1>
+          <h2>COVID SECURE GYM</h2>
+          </Grid>
         </Grid>
       
     </Container>

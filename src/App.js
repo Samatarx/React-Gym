@@ -11,9 +11,22 @@ import Covid from "./Covid";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import { Grid } from "@material-ui/core";
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+import { lightBlue, red} from '@material-ui/core/colors';
+
+const theme = createMuiTheme(
+  {
+    palette: {
+      primary: lightBlue,
+      secondary: red,
+    },
+  }
+)
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <Grid container direction="column" justify="center" alignItems="center">
       <Router>
         <Nav />
@@ -43,6 +56,7 @@ function App() {
         <Footer />
       </Router>
     </Grid>
+    </ThemeProvider>
   );
 }
 
