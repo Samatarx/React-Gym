@@ -7,9 +7,11 @@ import {
   makeStyles,
   ListItem,
   List,
+  Button,
+  createMuiTheme,
 } from "@material-ui/core";
 // import {FitnessCenter} from '@material-ui/icons';
-
+const theme = createMuiTheme()
 const useStyles = makeStyles({
   nav: {
     display: "flex",
@@ -26,16 +28,17 @@ const useStyles = makeStyles({
   },
   listItem: {
     listStyle: "none",
-   
-    border: '1px red solid',
-   backgroundColor: 'red',
-    borderRadius: '5px'
   },
   link: {
-    color:'white',
+    color: "white",
     textDecoration: "none",
- 
-  } 
+  },
+  margin:{
+    display: 'flex',
+    justifyContent:'center',
+    width:'100px',
+    padding:'0'
+  }
 });
 
 function Nav() {
@@ -44,14 +47,22 @@ function Nav() {
     <AppBar className={classes.App} position="static">
       <Toolbar className={classes.nav}>
         <Typography>
-          <Link to="/">React Gym</Link>
+          <Link to="/" className={classes.link}>
+            React Gym
+          </Link>
         </Typography>
         <List className={classes.list}>
           <ListItem button>
-            <Link to="/Location">Locations</Link>
+            <Link to="/Location" className={classes.link}>
+              Locations
+            </Link>
           </ListItem>
-          <ListItem className={classes.listItem} button>
-            <Link to="/Signup" className={classes.link} >Join Now</Link>
+          <ListItem className={classes.listItem}>
+            <Link to="/Signup" className={classes.link}>
+              <Button variant="contained" color="secondary" size="large"   className={classes.margin}>
+                Join Now
+              </Button>
+            </Link>
           </ListItem>
         </List>
       </Toolbar>

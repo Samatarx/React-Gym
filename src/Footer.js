@@ -1,9 +1,10 @@
 import {
-  AppBar,
+  Grid,
   List,
   ListItem,
   Typography,
   makeStyles,
+  AppBar,
 } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -14,24 +15,43 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  listItem: {
+    justifyContent: "center",
+  },
+  link: {
+    color: "white",
+    textDecoration: "none",
+  },
+  footer: {
+    marginTop: "calc(80% + 60px)",
+    bottom: "0",
+  },
 });
 
 function Footer() {
   const classes = useStyles();
   return (
-    <AppBar position="static">
+    <AppBar className={classes.footer}>
       <List className={classes.list}>
-      <ListItem button>
-          <Link to="/Covid-19">Covid-19</Link>
+        <ListItem className={classes.listItem}>
+          <Link to="/Covid-19" className={classes.link}>
+            Covid-19
+          </Link>
         </ListItem>
-        <ListItem button>
-          <Link to="/AboutUs">About Us</Link>
+        <ListItem className={classes.listItem}>
+          <Link to="/AboutUs" className={classes.link}>
+            About Us
+          </Link>
         </ListItem>
-        <ListItem button>
-          <Link to="/Careers">Careers</Link>
+        <ListItem className={classes.listItem}>
+          <Link to="/Careers" className={classes.link}>
+            Careers
+          </Link>
         </ListItem>
-        <ListItem button>
-          <Link to="/Terms">Terms & conditions</Link>
+        <ListItem className={classes.link}>
+          <Link to="/Terms" className={classes.link}>
+            Terms & conditions
+          </Link>
         </ListItem>
       </List>
     </AppBar>
